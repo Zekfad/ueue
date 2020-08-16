@@ -128,10 +128,10 @@ class Q extends EventEmitter {
 	}
 
 	/**
+	 * New task handler.
 	 * @param {Task} task Task.
 	 * @returns {boolean} Whatever if task has been started immediately.
 	 * @private
-	 * @callback
 	 */
 	onNewTask(task) {
 		let { q, } = this;
@@ -145,7 +145,6 @@ class Q extends EventEmitter {
 	 * @param {Task} task Ended task.
 	 * @returns {boolean} Whatever any another task has run.
 	 * @private
-	 * @callback
 	 */
 	onTaskDone(task) {
 		this.q = this.q.filter(qTask => qTask !== task);

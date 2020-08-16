@@ -36,7 +36,7 @@
         <ul></ul>
     </div>
     
-    <div class="lnb-api hidden"><h3>Classes</h3><ul><li><a href="Q.html">Q</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Q_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Q.html#q">q</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Q.html#add">add</a></li><li><a href="Q.html#addBunch">addBunch</a></li><li><a href="Q.html#hasRunningTasks">hasRunningTasks</a></li><li><a href="Q.html#pushTask">pushTask</a></li><li><a href="Q.html#tryToRunTask">tryToRunTask</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="Q.html#onNewTask">onNewTask</a></li><li><a href="Q.html#onTaskDone">onTaskDone</a></li></ul></div></li><li><a href="Task.html">Task</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Task_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Task.html#endEventName">endEventName</a></li><li><a href="Task.html#fn">fn</a></li><li><a href="Task.html#id">id</a></li><li><a href="Task.html#status">status</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Task.html#run">run</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#QErrors">QErrors</a></li><li><a href="global.html#TaskStatus">TaskStatus</a></li></ul></div>
+    <div class="lnb-api hidden"><h3>Classes</h3><ul><li><a href="Q.html">Q</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Q_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Q.html#q">q</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Q.html#add">add</a></li><li><a href="Q.html#addBunch">addBunch</a></li><li><a href="Q.html#hasRunningTasks">hasRunningTasks</a></li><li><a href="Q.html#onNewTask">onNewTask</a></li><li><a href="Q.html#onTaskDone">onTaskDone</a></li><li><a href="Q.html#pushTask">pushTask</a></li><li><a href="Q.html#tryToRunTask">tryToRunTask</a></li></ul></div></li><li><a href="Task.html">Task</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Task_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Task.html#endEventName">endEventName</a></li><li><a href="Task.html#fn">fn</a></li><li><a href="Task.html#id">id</a></li><li><a href="Task.html#status">status</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Task.html#run">run</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#QErrors">QErrors</a></li><li><a href="global.html#TaskStatus">TaskStatus</a></li></ul></div>
 </nav>
 <div id="resizer"></div>
 
@@ -735,6 +735,326 @@ In case if any task failed this will be rejected.</p>
 
 <dt>
     
+        <h4 class="name" id="onNewTask">
+            
+                <span class="type-signature"><span class="icon green">private</span> </span>onNewTask<span class="signature">(task)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="q.js.html">q.js</a></code>,
+                <code><a href="q.js.html#line136">line 136</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>New task handler.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>task</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Task.html">Task</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Task.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>Whatever if task has been started immediately.</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="onTaskDone">
+            
+                <span class="type-signature"><span class="icon green">private</span> </span>onTaskDone<span class="signature">(task)</span><span class="type-signature"> &rarr; {boolean}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="q.js.html">q.js</a></code>,
+                <code><a href="q.js.html#line149">line 149</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Remove task from queue and start next in queue.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>task</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Task.html">Task</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Ended task.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">boolean</span>
+
+
+
+
+
+- <p>Whatever any another task has run.</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
         <h4 class="name" id="pushTask">
             
                 <span class="type-signature"><span class="icon green">private</span> </span>pushTask<span class="signature">(task)</span><span class="type-signature"> &rarr; {Array.&lt;<a href="Task.html">Task</a>, Promise>}</span>
@@ -905,7 +1225,7 @@ In case if any task failed this will be rejected.</p>
             
             <div class="container-source members">
                 <code><a href="q.js.html">q.js</a></code>,
-                <code><a href="q.js.html#line162">line 162</a></code>
+                <code><a href="q.js.html#line161">line 161</a></code>
             </div>
             
         </h4>
@@ -1076,144 +1396,6 @@ In case if any task failed this will be rejected.</p>
             </dl>
     
 
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        <dl>
-                
-
-<dt>
-<h4 class="name" id="onNewTask">
-    onNewTask
-    
-    <div class="container-source members">
-        <code><a href="q.js.html">q.js</a></code>,
-        <code><a href="q.js.html#line136">line 136</a></code>
-    </div>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-
-    <!--
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-            
-                
-
-<dt>
-<h4 class="name" id="onTaskDone">
-    onTaskDone
-    
-    <div class="container-source members">
-        <code><a href="q.js.html">q.js</a></code>,
-        <code><a href="q.js.html#line150">line 150</a></code>
-    </div>
-    
-</h4>
-
-
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Remove task from queue and start next in queue.</p>
-    </div>
-    
-
-    <!--
-    
-    -->
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-            </dl>
     
 
     

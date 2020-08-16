@@ -1,3 +1,10 @@
+declare module 'ueue' {
+    export = {
+        Q,
+        Task,
+    };
+}
+
 /**
  * <p>Create queue manager.</p>
  */
