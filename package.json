@@ -10,7 +10,7 @@
 		}
 	},
 	"name": "ueue",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Queue - ueue is silent. Simple event-driven queue manager.",
 	"keywords": [
 		"queue",
