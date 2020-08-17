@@ -44,4 +44,4 @@ coverage/
 
 # Distribution
 **/dist/
-**.tgz
+**/*.tgz
