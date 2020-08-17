@@ -1,16 +1,16 @@
 {
 	"type": "module",
 	"main": "./dist/cjs/bundle.cjs",
-	"module": "./dist/esm/bundle.js",
+	"module": "./dist/esm/bundle.mjs",
 	"exports": {
 		".": {
 			"import": "./dist/esm/bundle.mjs",
 			"require": "./dist/cjs/bundle.cjs",
-			"default": "./dist/esm/bundle.cjs"
+			"default": "./dist/esm/bundle.mjs"
 		}
 	},
 	"name": "ueue",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Queue - ueue is silent. Simple event-driven queue manager.",
 	"keywords": [
 		"queue",
