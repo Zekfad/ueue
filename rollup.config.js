@@ -11,7 +11,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import builtins from 'builtin-modules';
-import MagicString from 'magic-string';
 import { terser, } from 'rollup-plugin-terser';
 
 
@@ -38,51 +37,6 @@ plugins.push(...[
 		preferBuiltins: true,
 	}),
 	commonjs(),
-	// Hack: JSDoc resolver
-	(function jsDocResolver() {
-		return {
-			transform(code) {
-				let jsDocRegExp = /\/\*\*([^*]|(\*(?!\/)))*\*\//g,
-					jsDocMatch,
-					indexes = [],
-					imports = [];
-
-				while ((jsDocMatch = jsDocRegExp.exec(code))) {
-					let importRegExp = /import\((.*)\)\./g,
-						importMatch;
-
-					while ((importMatch = importRegExp.exec(jsDocMatch[0]))) {
-						let importModule = importMatch[1];//.replace(/^(["'`])(.*)\1$/, '$2');
-
-						indexes.push([
-							jsDocMatch.index + importMatch.index,
-							jsDocMatch.index + importMatch.index + importMatch[0].length,
-						]);
-
-						if (!imports.includes(importModule))
-							imports.push(importModule);
-					}
-				}
-
-				let result = null;
-
-				if (indexes.length) {
-					let magicCode = new MagicString(code);
-
-					indexes.forEach(offsets => magicCode.remove(...offsets));
-
-					imports.forEach(importModule => magicCode.prepend(`import ${importModule};\n`));
-
-					result = {
-						code: magicCode.toString(),
-						map : magicCode.generateMap({ hires: true, }),
-					};
-				}
-
-				return result;
-			},
-		};
-	})(),
 ]);
 
 if (!devMode)
